@@ -1,56 +1,308 @@
 <!DOCTYPE html>
 <html lang="en-US">
   <head>
-    <!-- General meta tags needed-->
-    <meta charset="utf-8" />
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-    <!-- Needed for responsive design -->
+    <meta charset="UTF-8" />
+    <title>VA Mortgage Center</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta name="author" content="James Leyden" />
     <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+      name="description"
+      content="Prequalify for a $0 down VA Loan with the specialists at Veterans United Home Loans, the VA Loan destination for millions."
     />
-    <!-- If you want custom browser colors on mobile -->
-    <meta name="theme-color" content="#1843c1" />
-    <meta name="apple-mobile-web-app-status-bar-style" content="#1843c1" />
-
-    <title></title>
-
-    <!-- Google Fonts -->
+    <meta name="robots" content="index,follow" />
+    <meta name="googlebot" content="index,follow" />
+    <meta name="google" content="nositelinkssearchbox" />
+    <meta name="twitter:title" content="VA Mortgage Center" />
+    <meta
+      property="og:image"
+      content="https://developer.cdn.mozilla.net/static/img/opengraph-logo.dc4e08e2f6af.png"
+    />
+    <meta
+      property="og:description"
+      content="Prequalify for a $0 down VA Loan with the specialists at Veterans United Home Loans, the VA Loan destination for millions."
+    />
+    <meta property="og:title" content="VA Mortgage Center" />
     <link
-      href="https://fonts.googleapis.com/css?family=Roboto:400,700"
-      rel="stylesheet"
+      rel="shortcut icon"
+      href="/src/images/vamc_logo_1x1.ico"
+      type="image/x-icon"
+    />
+    <link
+      rel="apple-touch-icon-precomposed"
+      sizes="144x144"
+      href="/src/images/vamc_logo_1x1@3.png"
+    />
+    <link
+      rel="apple-touch-icon-precomposed"
+      sizes="114x114"
+      href="/src/images/vamc_logo_1x1@2.png"
+    />
+    <link
+      rel="apple-touch-icon-precomposed"
+      sizes="72x72"
+      href="/src/images/vamc_logo_1x1.png"
+    />
+    <link
+      rel="apple-touch-icon-precomposed"
+      href="/src/images/vamc_logo_1x1.png"
     />
 
+    <link rel="shortcut icon" href="/src/images/vamc_logo_1x1.png" />
     <!-- CSS File -->
     <link rel="stylesheet" href="dist/style.css?cb=1579051127310" />
+    <link rel="stylesheet" href="https://use.typekit.net/wks2uky.css" />
+    <meta name="theme-color" content="#151F3A" />
   </head>
+
   <body>
-    <main>
-      <section class="content">
-        <h1>Front-end Boilerplate</h1>
-        <h2>Using Sass and Gulp</h2>
-
-        <p>
-          Here's a quick set-up guide:
+    <div class="site-wrapper">
+      <div class="banner-legal">
+        <p class="sm-text">
+          A VA approved lender. Not affiliated with the Dept. of Veterans
+          Affairs or any government agency.
         </p>
+      </div>
+      <header class="site-header">
+        <img
+          src="src/images/vamc_logo.svg"
+          alt="VA Mortgage Center"
+          class="logo"
+        />
+        <div class="mobile-dropdown nav__button" id="nav-trigger">
+          <img
+            src="src/images/icon-menu.svg"
+            alt="Mobile Menu"
+            class="icon icon-menu"
+          />
+        </div>
 
-        <ul>
-          <li>Clone Git repo</li>
-          <li>Install by running "npm install" on the commmand line</li>
-          <li>Run "gulp" on the command line.</li>
-        </ul>
-      </section>
+        <nav class="site-nav" id="site-nav">
+          <ul class="nav-linklist">
+            <li class="nav-item"><a href="#">VA Loan</a></li>
+            <li class="nav-item"><a href="#">Eligibility</a></li>
+            <li class="nav-item"><a href="#">Resources</a></li>
+            <li class="nav-item"><a href="#">Find Your Lender</a></li>
+          </ul>
+        </nav>
+      </header>
+      <main role="main">
+        <section class="section-wrapper-1 ">
+          <div class="main-banner inner-wrapper">
+            <h1 class="hero-text">Get matched with your perfect lender</h1>
+            <p class="subtitle">
+              Achieve homeownership with confidence and ease
+            </p>
+            <div class="button-container">
+              <a href="#" class="btn btn-secondary">Buy a Home</a>
+              <a href="#" class="btn btn-secondary">Refinance</a>
+            </div>
+          </div>
+        </section>
 
-      <aside>
-        <h3>Project Info</h3>
-        <p>
-          This is a starter front-end project which will compile SCSS and JS
-          files using Gulp 4.
-        </p>
-      </aside>
-    </main>
+        <!-- // Resources -->
+        <section class="section-wrapper-2 ">
+          <div class="inner-wrapper resources">
+            <h1 class="title-text">Your VA loan questions are answered</h1>
+            <p class="banner-description">
+              <i>
+                Popular resources to make your process of homeownership easier.
+              </i>
+            </p>
+            <div class="card-columns">
+              <a href="#">
+              <div class="card-container">
 
-    <!-- JavaScript File -->
-    <script src="dist/all.js?cb=1579051127310"></script>
+                <div class="icon">
+                  <img
+                  src="src/images/icon-home.svg"
+                  alt="Firstt Time Buyers"
+                />
+                </div>
+                <div class="card-meta">
+                  <h4 class="card-title">First Time Buyers</h4>
+                </div>
+
+              </div>
+              </a>
+              <a href="#">
+              <div class="card-container">
+                <div class="icon">
+                  <img
+                  src="src/images/icon-check.svg"
+                  alt="VA Loan Eligibility"
+                />
+                </div>
+                <div class="card-meta">
+                  <h4 class="card-title">VA Loan Eligibility</h4>
+                </div>
+              </div>
+              </a>
+              <a href="#">
+              <div class="card-container">
+                <div class="icon">
+                  <img
+                  src="src/images/icon-award.svg"
+                  alt="Top 10 Lenders"
+                />
+                </div>
+                <div class="card-meta">
+                  <h4 class="card-title">Top 10 Lenders</h4>
+                </div>
+              </div>
+              </a>
+              <a href="#">
+              <div class="card-container">
+                <div class="icon">
+                  <img
+                  src="src/images/icon-graph.svg"
+                  alt="VA Loan Rates"
+                />
+                </div>
+                <div class="card-meta">
+                  <h4 class="card-title">VA Loan Rates</h4>
+                </div>
+
+              </div>
+            </a>
+              <a href="#" class="read-more resource-link">More Resources</a>
+            </div>
+
+            </div>
+          </div>
+        </section>
+        <!-- // Benefits -->
+        <section class="section-wrapper-3">
+          <div class="inner-wrapper benefits">
+            <div class="right">
+              <img
+                src="/src/images/va-loan-benefits.png"
+                alt="VA Loan Benefits"
+                class="img"
+                id="benefits-img"
+              />
+            </div>
+            <div class="left">
+              <h1>Utilize all your VA Benefits</h1>
+                <div class="benefit-container">
+                  <p class="accent">$0 Down</p>
+                  <p>
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                    Dolor harum a beatae natus commodi aperiam dolorum provident
+                    id? Earum voluptatem eum incidunt dicta odit dolores sit
+                    repellendus id nostrum suscipit?
+                  </p>
+
+
+                  <p class="accent">Lower Payments</p>
+                  <p>
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                    Dolor harum a beatae natus commodi aperiam dolorum provident
+                    id? Earum voluptatem eum incidunt dicta odit dolores sit
+                    repellendus id nostrum suscipit?
+                  </p>
+
+
+                  <p class="accent">Easier to Qualify</p>
+                  <p>
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                    Dolor harum a beatae natus commodi aperiam dolorum provident
+                    id? Earum voluptatem eum incidunt dicta odit dolores sit
+                    repellendus id nostrum suscipit?
+                  </p>
+
+                </div>
+            </div>
+            <a href="#" class="read-more accent centered ">See your perfect lender</a>
+          </div>
+
+
+        </section>
+        <!-- Modular Blocks -->
+        <section class="section-wrapper-4">
+          <div class="inner-wrapper blocks">
+            <div class="right right-blocks">
+              <div class="block-card" id="resources">
+                <h4>
+                  Access all your resources
+                </h4>
+                <a href="#" class="read-more arrow">Learn More</a>
+              </div>
+              <div class="block-card" id="va-loan">
+                <h4>
+                  Maximize your loan benefits
+                </h4>
+                <a href="#" class="read-more arrow">Learn More</a>
+              </div>
+            </div>
+            <div class="left left-blocks">
+              <div class="block-card tall" id="cta">
+                <h4>
+                  Get matched with your perfect lender
+                </h4>
+                <a href="#" class="read-more arrow">see your perfect lender</a>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- // Final Search -->
+        <section class="section-wrapper-5 ">
+          <div class="inner-wrapper search">
+            <h4 class="small-title">Your loan questions answered</h4>
+            <form class="search-container">
+              <input type="text" id="search-bar" placeholder="What's your question?">
+            </form>
+          </div>
+        </section>
+
+        <footer class="site-footer">
+          <div class="section-wrapper logo-help">
+            <img
+              src="src/images/vamc_logo.svg"
+              alt="VA Mortgage Center"
+              class="logo"
+            />
+            <div class="icons">
+              <img
+                src="src/images/icon-phone.svg"
+                alt="Give us a call"
+                class="icon icons-footer"
+              />
+              <img
+                src="src/images/icon-help.svg"
+                alt="Give us a call"
+                class="icon icons-footer"
+              />
+              <img
+                src="src/images/icon-email.svg"
+                alt="Give us a call"
+                class="icon icons-footer"
+              />
+            </div>
+          </div>
+          <div class="footer-nav site-nav">
+
+              <ul class="nav-linklist">
+                <li class="nav-item"><a href="#">VA Loan</a></li>
+                <li class="nav-item"><a href="#">Eligibility</a></li>
+                <li class="nav-item"><a href="#">Resources</a></li>
+                <li class="nav-item"><a href="#">Find Your Lender</a></li>
+              </ul>
+
+
+
+          </div>
+          <div class="banner-legal">
+            <p class="sm-text">
+              A VA approved lender. Not affiliated with the Dept. of Veterans
+              Affairs or any government agency.
+            </p>
+          </div>
+        </footer>
+      </main>
+    </div>
+
+<script src="dist/all.js?cb=1579051127310"></script>
   </body>
 </html>
