@@ -1,0 +1,88 @@
+/* Mixins
+ * ========================================================================== */
+
+@mixin for-size($breakpoint, $direction: up) {
+  @if map-has-key($breakpoints, $breakpoint) {
+    $breakpoint-value: map-get($breakpoints, $breakpoint);
+
+    @if $direction == up {
+      @media (min-width: $breakpoint-value) {
+        @content;
+      }
+    } @else if $direction == down {
+      @media (max-width: $breakpoint-value) {
+        @content;
+      }
+    }
+  } @else {
+    @if $direction == up {
+      @media (min-width: $breakpoint) {
+        @content;
+      }
+    } @else if $direction == down {
+      @media (max-width: $breakpoint) {
+        @content;
+      }
+    }
+  }
+}
+
+@mixin base-font-stack {
+  font-family: $base-font-family;
+  font-weight: 300;
+  font-style: normal;
+  letter-spacing: 0.25px;
+}
+
+@mixin background-base($bg) {
+  width: 100%;
+  background: $bg;
+  @if lightness($bg) < 70% {
+    color: white;
+  }
+}
+@mixin background($imgpath, $size: cover, $position: 0 0, $repeat: no-repeat) {
+  background: {
+    image: url($imgpath);
+    size: $size;
+    position: $position;
+    repeat: $repeat;
+  }
+}
+
+@mixin avenirBlack {
+  font-family: AvenirLTPro-Black;
+  src: url("src/fonts/AvenirLTPro-Black.woff2") format("woff2"),
+    url("src/fonts/AvenirLTPro-Black.woff") format("woff"),
+    url("src/fonts/AvenirLTPro-Black.ttf") format("truetype");
+}
+@mixin avenirHeavy {
+  font-family: AvenirLTPro-Heavy;
+  src: url("src/fonts/AvenirLTPro-Heavy.woff2") format("woff2"),
+    url("src/fonts/AvenirLTPro-Heavy.woff") format("woff"),
+    url("src/fonts/AvenirLTPro-Heavy.ttf") format("truetype");
+}
+@mixin avenirMedium {
+  font-family: AvenirLTPro-Medium;
+  src: url("src/fonts/AvenirLTPro-Medium.woff2") format("woff2"),
+    url("src/fonts/AvenirLTPro-Medium.woff") format("woff"),
+    url("src/fonts/AvenirLTPro-Medium.ttf") format("truetype");
+}
+
+@mixin button-bg($bg) {
+  background: $bg;
+  @if lightness($bg) < 70% {
+    color: white;
+  }
+  &:hover {
+    background: darken($bg, 8%);
+    transition: all 0.3s ease;
+  }
+  &:active {
+    background: darken($bg, 25%);
+  }
+}
+
+@mixin section-wrapper {
+  padding: 0px 15px;
+}

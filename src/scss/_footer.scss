@@ -1,0 +1,35 @@
+/* Footer
+ * ========================================================================== */
+
+.site-footer {
+  margin-top: 2em;
+  .logo {
+    max-width: 350px;
+  }
+}
+
+.footer-nav {
+  @include background-base($navy);
+  width: 100%;
+  margin-top: 2em;
+  padding: 1.5em 0 1.15em;
+  &.site-nav {
+    display: block;
+  }
+  .nav-linklist {
+    width: 100%;
+    margin-block-start: 0;
+    padding-inline-start: 0;
+    list-style: none;
+    .nav-item {
+      width: fit-content;
+      margin: 0 auto;
+      padding: 0.35em 0;
+      a {
+        color: $white;
+        text-decoration: none;
+        text-align: center;
+      }
+    }
+  }
+}

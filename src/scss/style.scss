@@ -1,4 +1,7 @@
+@import "normalize";
 @import "variables";
-@import "colors";
-@import "global";
-@import "typography";
+@import "mixins";
+@import "base";
+@import "header";
+@import "homepage";
+@import "footer";

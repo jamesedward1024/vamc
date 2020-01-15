@@ -1,16 +1,24 @@
-// Media Queries
-$mq-620-down: "only screen and (max-width: 620px)";
-$mq-620-up: "only screen and (min-width: 620px)";
+/* Variables
+ * ========================================================================== */
 
-$mq-760-down: "only screen and (max-width: 759px)";
-$mq-760-up: "only screen and (min-width: 760px)";
+// A map of breakpoints
+$breakpoints: (
+  phone-sm: 420px,
+  phone-lg: 600px,
+  tablet: 775px,
+  tablet-lg: 1024px,
+  desktop: 1025px,
+  desktop-lg: 1400px
+);
 
-$mq-900-down: "only screen and (max-width: 899px)";
-$mq-900-up: "only screen and (min-width: 900px)";
+// Colors
+$navy: #151f3a;
+$green: #5faa89;
+$ivory: #d6d9ce;
+$steel: #4c4b54;
+$offwhite: #f8fbf9;
+$black: #0a0a0a;
+$white: #ffffff;
 
-$mq-1000-down: "only screen and (max-width: 999px)";
-$mq-1000-up: "only screen and (min-width: 1000px)";
-
-$mq-1180-up: "only screen and (min-width: 1180px)";
-
-$mq-1400-up: "only screen and (min-width: 1400px)";
+// Typography
+$base-font-family: "helvetica neue", sans-serif;
