@@ -1,13 +1,10 @@
-// Global
-app.global = {
-    init: function(){ // Load all global functions here
-        console.log("load global functions");
-        app.global.loadHeader();
-    },
-    loadHeader: function(){ // Some specific function
-        console.log("loadHeader()");
+document.querySelector(".nav-toggle").addEventListener("click", function(e) {
+  [].map.call(
+    document.querySelectorAll(
+      ".primary-nav, .site-wrapper, .nav-header, .nav-linklist"
+    ),
+    function(el) {
+      el.classList.toggle("nav-active");
     }
-}
-
-// Run the global stuff
-app.global.init();
+  );
+});

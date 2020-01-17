@@ -50,13 +50,13 @@
 
     <link rel="shortcut icon" href="/src/images/vamc_logo_1x1.png" />
     <!-- CSS File -->
-    <link rel="stylesheet" href="dist/style.css?cb=1579060615678" />
+    <link rel="stylesheet" href="dist/style.css?cb=1579243962652" />
     <link rel="stylesheet" href="https://use.typekit.net/wks2uky.css" />
     <meta name="theme-color" content="#151F3A" />
   </head>
 
-  <body>
-    <div class="site-wrapper">
+  <body class="site-wrapper">
+
       <div class="banner-legal">
         <p class="sm-text">
           A VA approved lender. Not affiliated with the Dept. of Veterans
@@ -69,15 +69,13 @@
           alt="VA Mortgage Center"
           class="logo"
         />
-        <div class="mobile-dropdown nav__button" id="nav-trigger">
-          <img
-            src="src/images/icon-menu.svg"
-            alt="Mobile Menu"
-            class="icon icon-menu"
-          />
-        </div>
+        <button class="nav-toggle" type="button">
+          <span></span>
+        </button>
+        <nav class="primary-nav">
+          <div class="nav-header">
 
-        <nav class="site-nav" id="site-nav">
+          </div>
           <ul class="nav-linklist">
             <li class="nav-item"><a href="#">VA Loan</a></li>
             <li class="nav-item"><a href="#">Eligibility</a></li>
@@ -85,8 +83,9 @@
             <li class="nav-item"><a href="#">Find Your Lender</a></li>
           </ul>
         </nav>
+
       </header>
-      <main role="main">
+      <main role="main" class="main">
         <section class="section-wrapper-1 ">
           <div class="main-banner inner-wrapper">
             <h1 class="hero-text">Get matched with your perfect lender</h1>
@@ -248,11 +247,18 @@
 
         <!-- // Final Search -->
         <section class="section-wrapper-5 ">
-          <div class="inner-wrapper search">
-            <h4 class="small-title">Your loan questions answered</h4>
-            <form class="search-container">
-              <input type="text" id="search-bar" placeholder="What's your question?">
-            </form>
+          <div class="inner-wrapper">
+
+            <form  class="search">
+
+    <div class="field">
+
+      <input type="text" class="input-search" id="input-search" name="input-search"  required>
+<label for="input-search">Search your questions</label>
+
+    </div> <!-- /field -->
+
+  </form>
           </div>
         </section>
 
@@ -281,7 +287,7 @@
               />
             </div>
           </div>
-          <div class="footer-nav site-nav">
+          <div class="footer-nav">
 
               <ul class="nav-linklist">
                 <li class="nav-item"><a href="#">VA Loan</a></li>
@@ -301,8 +307,8 @@
           </div>
         </footer>
       </main>
-    </div>
 
-<script src="dist/all.js?cb=1579060615678"></script>
+
+<script src="dist/all.js?cb=1579243962652"></script>
   </body>
 </html>

@@ -1,5 +1,20 @@
 /* Variables
  * ========================================================================== */
+//Prefixes
+$prefixes: ("", "-moz-", "-ms-", "-o-", "-webkit-");
+
+//Animations
+@mixin transition($transition: all, $time: 2s, $ease: linear, $delay: 0s) {
+  @each $prefix in $prefixes {
+    #{$prefix}transition: $transition $time $ease $delay;
+  }
+}
+
+@mixin transform($transform) {
+  @each $prefix in $prefixes {
+    #{$prefix}transform: $transform;
+  }
+}
 
 // A map of breakpoints
 $breakpoints: (
@@ -19,6 +34,11 @@ $steel: #4c4b54;
 $offwhite: #f8fbf9;
 $black: #0a0a0a;
 $white: #ffffff;
+
+// Padding
+$padding: 1.5em;
+$padding-sm: $padding/1.75;
+$padding-xs: $padding/2;
 
 // Typography
 $base-font-family: "helvetica neue", sans-serif;

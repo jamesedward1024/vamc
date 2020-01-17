@@ -20,6 +20,21 @@ body {
 }
 .site-wrapper {
   margin: 0 auto;
+  &.nav-active {
+    overflow: hidden;
+    z-index: 2;
+
+    &::after {
+      content: "";
+      position: absolute;
+      background-color: rgba(0, 0, 0, 0.85);
+      width: 100%;
+      top: 0;
+      right: 0;
+      left: 0;
+      bottom: 0;
+    }
+  }
 }
 .inner-wrapper {
   max-width: 1200px;
@@ -38,9 +53,10 @@ span,
 p,
 a,
 td,
-th {
+th,
+input,
+label {
   font-size: 0.87em;
-
   @include base-font-stack;
   letter-spacing: 0.65px;
 }
@@ -117,6 +133,13 @@ h4 {
 
 /* Buttons and Links
  * ========================================================================== */
+button {
+  padding: 0;
+  background-color: transparent;
+  outline: none;
+  border: none;
+  cursor: pointer;
+}
 .read-more {
   margin: 1em auto;
   width: fit-content;
