@@ -15,7 +15,6 @@
   justify-content: center;
   .hero-text {
     text-align: center;
-    line-height: 1.2;
   }
   .subtitle {
     padding: 20px 0;
@@ -73,7 +72,6 @@
 }
 
 .banner-description {
-  padding-top: 2em;
 }
 
 .card-columns {
@@ -130,17 +128,22 @@
     display: none;
   }
   .left {
-    h3 {
+    .h3 {
       margin-bottom: 0.5em;
+      position: relative;
+
+      &::after {
+        background-color: $green;
+        content: "";
+        height: 3px;
+        position: absolute;
+        bottom: -2px;
+        left: 0;
+        width: 40px;
+      }
     }
 
-    .accent {
-      font-style: italic;
-      border-bottom: 2px solid $black;
-      width: fit-content;
-      margin-bottom: 5px;
-    }
-    p {
+    .benefit-description {
       margin: 0.5em 0 2em 1.25em;
     }
   }
@@ -165,17 +168,11 @@
     }
     .left {
       flex-basis: 50%;
-      h3 {
+      .h3 {
         margin-bottom: 0.5em;
       }
 
-      .accent {
-        font-style: italic;
-        border-bottom: 2px solid $black;
-        width: fit-content;
-        margin-bottom: 5px;
-      }
-      p {
+      .benefit-description {
         margin: 0.5em 0 2em 1.25em;
       }
     }

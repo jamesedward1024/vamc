@@ -50,8 +50,8 @@
 
     <link rel="shortcut icon" href="/src/images/vamc_logo_1x1.png" />
     <!-- CSS File -->
-    <link rel="stylesheet" href="dist/style.css?cb=1579243962652" />
-    <link rel="stylesheet" href="https://use.typekit.net/wks2uky.css" />
+    <link rel="stylesheet" href="/src/scss/style.css" />
+
     <meta name="theme-color" content="#151F3A" />
   </head>
 
@@ -69,18 +69,18 @@
           alt="VA Mortgage Center"
           class="logo"
         />
-        <button class="nav-toggle" type="button">
+        <button class="nav-toggle">
           <span></span>
         </button>
         <nav class="primary-nav">
           <div class="nav-header">
 
           </div>
-          <ul class="nav-linklist">
-            <li class="nav-item"><a href="#">VA Loan</a></li>
-            <li class="nav-item"><a href="#">Eligibility</a></li>
-            <li class="nav-item"><a href="#">Resources</a></li>
-            <li class="nav-item"><a href="#">Find Your Lender</a></li>
+          <ul class="nav-linklist" role="menubar">
+            <li class="nav-item"><a href="#" role="menuitem">VA Loan</a></li>
+            <li class="nav-item"><a href="#" role="menuitem">Eligibility</a></li>
+            <li class="nav-item"><a href="#" role="menuitem">Resources</a></li>
+            <li class="nav-item"><a href="#" role="menuitem">Find Your Lender</a></li>
           </ul>
         </nav>
 
@@ -88,7 +88,7 @@
       <main role="main" class="main">
         <section class="section-wrapper-1 ">
           <div class="main-banner inner-wrapper">
-            <h1 class="hero-text">Get matched with your perfect lender</h1>
+            <h1 class="h1 hero-text">Get matched with your perfect lender</h1>
             <p class="subtitle">
               Achieve homeownership with confidence and ease
             </p>
@@ -102,7 +102,7 @@
         <!-- // Resources -->
         <section class="section-wrapper-2 ">
           <div class="inner-wrapper resources">
-            <h1 class="title-text">Your VA loan questions are answered</h1>
+            <h1 class="h1 title-text">Your VA loan questions are answered</h1>
             <p class="banner-description">
               <i>
                 Popular resources to make your process of homeownership easier.
@@ -119,7 +119,7 @@
                 />
                 </div>
                 <div class="card-meta">
-                  <h4 class="card-title">First Time Buyers</h4>
+                  <p class="h4 ">First Time Buyers</p>
                 </div>
 
               </div>
@@ -133,7 +133,7 @@
                 />
                 </div>
                 <div class="card-meta">
-                  <h4 class="card-title">VA Loan Eligibility</h4>
+                  <p class="h4 ">VA Loan Eligibility</p>
                 </div>
               </div>
               </a>
@@ -146,7 +146,7 @@
                 />
                 </div>
                 <div class="card-meta">
-                  <h4 class="card-title">Top 10 Lenders</h4>
+                  <p class="h4 ">Top 10 Lenders</p>
                 </div>
               </div>
               </a>
@@ -159,12 +159,12 @@
                 />
                 </div>
                 <div class="card-meta">
-                  <h4 class="card-title">VA Loan Rates</h4>
+                  <p class="h4 ">VA Loan Rates</p>
                 </div>
 
               </div>
             </a>
-              <a href="#" class="read-more resource-link">More Resources</a>
+              <a href="#" class="read-more resource-link">More Resources<span class="icon-arrow"></span></a>
             </div>
 
             </div>
@@ -182,10 +182,10 @@
               />
             </div>
             <div class="left">
-              <h1>Utilize all your VA Benefits</h1>
+              <h1 class="h1">Utilize all your VA Benefits</h1>
                 <div class="benefit-container">
-                  <p class="accent">$0 Down</p>
-                  <p>
+                  <p class="h3 ">$0 Down</p>
+                  <p class="benefit-description">
                     Lorem ipsum dolor sit amet consectetur, adipisicing elit.
                     Dolor harum a beatae natus commodi aperiam dolorum provident
                     id? Earum voluptatem eum incidunt dicta odit dolores sit
@@ -193,8 +193,8 @@
                   </p>
 
 
-                  <p class="accent">Lower Payments</p>
-                  <p>
+                  <p class="h3 ">Lower Payments</p>
+                  <p class="benefit-description">
                     Lorem ipsum dolor sit amet consectetur, adipisicing elit.
                     Dolor harum a beatae natus commodi aperiam dolorum provident
                     id? Earum voluptatem eum incidunt dicta odit dolores sit
@@ -202,8 +202,8 @@
                   </p>
 
 
-                  <p class="accent">Easier to Qualify</p>
-                  <p>
+                  <p class="h3 ">Easier to Qualify</p>
+                  <p class="benefit-description" >
                     Lorem ipsum dolor sit amet consectetur, adipisicing elit.
                     Dolor harum a beatae natus commodi aperiam dolorum provident
                     id? Earum voluptatem eum incidunt dicta odit dolores sit
@@ -222,23 +222,23 @@
           <div class="inner-wrapper blocks">
             <div class="right right-blocks">
               <div class="block-card" id="resources">
-                <h4>
+                <p>
                   Access all your resources
-                </h4>
+                </p>
                 <a href="#" class="read-more arrow">Learn More</a>
               </div>
               <div class="block-card" id="va-loan">
-                <h4>
+                <p>
                   Maximize your loan benefits
-                </h4>
+                </p>
                 <a href="#" class="read-more arrow">Learn More</a>
               </div>
             </div>
             <div class="left left-blocks">
               <div class="block-card tall" id="cta">
-                <h4>
+                <p>
                   Get matched with your perfect lender
-                </h4>
+                </p>
                 <a href="#" class="read-more arrow">see your perfect lender</a>
               </div>
             </div>
@@ -249,11 +249,11 @@
         <section class="section-wrapper-5 ">
           <div class="inner-wrapper">
 
-            <form  class="search">
+            <form  class="search" role="search">
 
     <div class="field">
 
-      <input type="text" class="input-search" id="input-search" name="input-search"  required>
+      <input type="text" class="input-search" id="input-search" name="input-search" role="searchbox"  required>
 <label for="input-search">Search your questions</label>
 
     </div> <!-- /field -->
@@ -309,6 +309,6 @@
       </main>
 
 
-<script src="dist/all.js?cb=1579243962652"></script>
+<script src="/src/js/main.js"></script>
   </body>
 </html>

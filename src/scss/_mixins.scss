@@ -27,29 +27,13 @@
   }
 }
 
-@mixin base-font-stack {
-  font-family: $base-font-family;
-  font-weight: 300;
-  font-style: normal;
+@mixin base-font($size: 0.95em, $weight: 300, $style: normal) {
+  font-family: $base-font;
+  font-size: $size;
+  font-weight: $weight;
+  font-style: $style;
   letter-spacing: 0.25px;
 }
-
-@mixin background-base($bg) {
-  width: 100%;
-  background: $bg;
-  @if lightness($bg) < 70% {
-    color: white;
-  }
-}
-@mixin background($imgpath, $size: cover, $position: 0 0, $repeat: no-repeat) {
-  background: {
-    image: url($imgpath);
-    size: $size;
-    position: $position;
-    repeat: $repeat;
-  }
-}
-
 @mixin avenirBlack {
   font-family: AvenirLTPro-Black;
   src: url("src/fonts/AvenirLTPro-Black.woff2") format("woff2"),
@@ -67,6 +51,22 @@
   src: url("src/fonts/AvenirLTPro-Medium.woff2") format("woff2"),
     url("src/fonts/AvenirLTPro-Medium.woff") format("woff"),
     url("src/fonts/AvenirLTPro-Medium.ttf") format("truetype");
+}
+
+@mixin background-base($bg) {
+  width: 100%;
+  background: $bg;
+  @if lightness($bg) < 70% {
+    color: white;
+  }
+}
+@mixin background($imgpath, $size: cover, $position: 0 0, $repeat: no-repeat) {
+  background: {
+    image: url($imgpath);
+    size: $size;
+    position: $position;
+    repeat: $repeat;
+  }
 }
 
 @mixin button-bg($bg) {

@@ -56,11 +56,10 @@ td,
 th,
 input,
 label {
-  font-size: 0.87em;
-  @include base-font-stack;
-  letter-spacing: 0.65px;
+  @include base-font;
 }
 a {
+  font-size: 1.05em;
   text-decoration: none;
   color: $black;
 }
@@ -68,24 +67,24 @@ th {
   font-weight: bold;
 }
 
-h1 {
-  font-size: 3.8em;
+.h1 {
+  font-size: 3.2em;
+  line-height: 1.2;
   @include avenirHeavy;
 }
 
-h2 {
+.h2 {
   font-size: 3em;
   letter-spacing: -0.7px;
   @include avenirHeavy;
 }
-h3 {
-  font-size: 2.6em;
+.h3 {
+  font-size: 1.6em;
   letter-spacing: -0.7px;
-  line-height: 1.1;
   @include avenirHeavy;
 }
-h4 {
-  font-size: 1.3em;
+.h4 {
+  font-size: 1.1em;
   @include avenirMedium;
 }
 
@@ -100,9 +99,9 @@ h4 {
   display: grid;
   width: 100%;
   grid-template-columns: 1fr 3fr;
-  padding: 10px 15px;
+  padding: $padding-sm;
   grid-gap: 30px;
-  box-shadow: 0 3px 7px -1px rgba(#000, 0.14);
+  box-shadow: 0 3px 7px -1px rgba(#000, 0.15);
   margin-bottom: 1.6%;
   background: $white;
   border-radius: 4px;
@@ -119,10 +118,6 @@ h4 {
     padding-right: 30px;
     flex-flow: column;
     justify-content: center;
-    .card-title {
-      @include avenirMedium;
-      font-size: 0.95em;
-    }
   }
 }
 @include for-size(tablet, up) {
@@ -143,6 +138,7 @@ button {
 .read-more {
   margin: 1em auto;
   width: fit-content;
+  cursor: pointer;
   font-style: italic;
   font-weight: 400;
   padding-bottom: 2px;
@@ -156,11 +152,11 @@ button {
 
 .btn {
   @include avenirMedium;
-  min-width: 150px;
-  padding: 10px 15px;
-  margin: 10px 10px;
+  max-width: 250px;
+  width: 100%;
+  padding: $padding $padding * 2;
+  margin: 10px;
   text-align: center;
-  border: 1px solid transparent;
   border-radius: 3px;
   color: $black;
   &:hover {
@@ -181,8 +177,7 @@ button {
 
 @include for-size(tablet, up) {
   .btn {
-    min-width: 200px;
-    padding: 15px 25px;
+    max-width: 300px;
   }
 }
 
