@@ -362,6 +362,38 @@ body {
 
 /* Typography
  * ========================================================================== */
+@font-face {
+  font-family: Avenir-Medium-Italic;
+  src: url("src/fonts/avenir-medium-italic/avenir-medium-italic.eot");
+  src: url("src/fonts/avenir-medium-italic/avenir-medium-italic.eot?#iefix") format("embedded-opentype"), url("src/fonts/avenir-medium-italic/avenir-medium-italic.woff") format("woff"), url("src/fonts/avenir-medium-italic/avenir-medium-italic.ttf") format("truetype"), url("src/fonts/avenir-medium-italic/avenir-medium-italic.svg#Avenir-Medium-Italic") format("svg");
+  font-weight: 550;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: Avenir-Medium "src/fonts/avenir-medium/avenir-medium";
+  src: url("550.eot");
+  src: url("550.eot?#iefix") format("embedded-opentype"), url("550.woff") format("woff"), url("550.ttf") format("truetype"), url("550.svg#Avenir-Medium src/fonts/avenir-medium/avenir-medium") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: Avenir-Heavy;
+  src: url("src/fonts/avenir-heavy/avenir-heavy.eot");
+  src: url("src/fonts/avenir-heavy/avenir-heavy.eot?#iefix") format("embedded-opentype"), url("src/fonts/avenir-heavy/avenir-heavy.woff") format("woff"), url("src/fonts/avenir-heavy/avenir-heavy.ttf") format("truetype"), url("src/fonts/avenir-heavy/avenir-heavy.svg#Avenir-Heavy") format("svg");
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: Avenir-Black;
+  src: url("src/fonts/avenir-black/avenir-black.eot");
+  src: url("src/fonts/avenir-black/avenir-black.eot?#iefix") format("embedded-opentype"), url("src/fonts/avenir-black/avenir-black.woff") format("woff"), url("src/fonts/avenir-black/avenir-black.ttf") format("truetype"), url("src/fonts/avenir-black/avenir-black.svg#Avenir-Black") format("svg");
+  font-weight: 750;
+  font-style: normal;
+}
+
 span,
 p,
 a,
@@ -377,9 +409,19 @@ label {
 }
 
 a {
-  font-size: 1.05em;
+  font-size: 0.85em;
   text-decoration: none;
   color: #0a0a0a;
+}
+
+a[role="menuitem"] {
+  font-size: 1.05em;
+}
+
+@media (min-width: 775px) {
+  a[role="menuitem"] {
+    font-size: 0.85em;
+  }
 }
 
 th {
@@ -387,30 +429,36 @@ th {
 }
 
 .h1 {
-  font-size: 3.2em;
+  font-family: Avenir-Black;
+  font-size: 3em;
+  font-weight: 750;
+  font-style: normal;
+  letter-spacing: -0.25px;
   line-height: 1.2;
-  font-family: AvenirLTPro-Heavy;
-  src: url("src/fonts/AvenirLTPro-Heavy.woff2") format("woff2"), url("src/fonts/AvenirLTPro-Heavy.woff") format("woff"), url("src/fonts/AvenirLTPro-Heavy.ttf") format("truetype");
 }
 
 .h2 {
-  font-size: 3em;
-  letter-spacing: -0.7px;
-  font-family: AvenirLTPro-Heavy;
-  src: url("src/fonts/AvenirLTPro-Heavy.woff2") format("woff2"), url("src/fonts/AvenirLTPro-Heavy.woff") format("woff"), url("src/fonts/AvenirLTPro-Heavy.ttf") format("truetype");
+  font-family: Avenir-Heavy;
+  font-size: 2.6em;
+  font-weight: 700;
+  font-style: normal;
+  letter-spacing: -0.25px;
 }
 
 .h3 {
-  font-size: 1.6em;
-  letter-spacing: -0.7px;
-  font-family: AvenirLTPro-Heavy;
-  src: url("src/fonts/AvenirLTPro-Heavy.woff2") format("woff2"), url("src/fonts/AvenirLTPro-Heavy.woff") format("woff"), url("src/fonts/AvenirLTPro-Heavy.ttf") format("truetype");
+  font-family: Avenir-Heavy;
+  font-size: 1.5em;
+  font-weight: 700;
+  font-style: normal;
+  letter-spacing: -0.25px;
 }
 
 .h4 {
+  font-family: Avenir-Medium;
   font-size: 1.1em;
-  font-family: AvenirLTPro-Medium;
-  src: url("src/fonts/AvenirLTPro-Medium.woff2") format("woff2"), url("src/fonts/AvenirLTPro-Medium.woff") format("woff"), url("src/fonts/AvenirLTPro-Medium.ttf") format("truetype");
+  font-weight: 550;
+  font-style: normal;
+  letter-spacing: -0.25px;
 }
 
 .sm-text {
@@ -425,7 +473,7 @@ th {
   width: 100%;
   -ms-grid-columns: 1fr 3fr;
       grid-template-columns: 1fr 3fr;
-  padding: 0.85714em;
+  padding: 0.5em;
   grid-gap: 30px;
   -webkit-box-shadow: 0 3px 7px -1px rgba(0, 0, 0, 0.15);
           box-shadow: 0 3px 7px -1px rgba(0, 0, 0, 0.15);
@@ -479,15 +527,21 @@ button {
 }
 
 .read-more {
+  font-size: 1.05em;
+  position: relative;
   margin: 1em auto;
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
-  cursor: pointer;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
   font-style: italic;
-  font-weight: 400;
   padding-bottom: 2px;
-  border-bottom: 2px solid #0a0a0a;
+  color: #151f3a;
+  border-bottom: 1.5px solid #151f3a;
+}
+
+.read-more:hover {
+  cursor: pointer;
+  -webkit-transform: scale(1.03);
+          transform: scale(1.03);
 }
 
 .read-more.accent {
@@ -500,16 +554,23 @@ button {
   src: url("src/fonts/AvenirLTPro-Medium.woff2") format("woff2"), url("src/fonts/AvenirLTPro-Medium.woff") format("woff"), url("src/fonts/AvenirLTPro-Medium.ttf") format("truetype");
   max-width: 250px;
   width: 100%;
-  padding: 1.5em 3em;
-  margin: 10px;
+  padding: 0.5em 0;
+  margin: 20px 0;
   text-align: center;
   border-radius: 3px;
   color: #0a0a0a;
+  font-size: 1.25em;
+}
+
+@media (min-width: 775px) {
+  .btn {
+    margin: auto 1.5em;
+  }
 }
 
 .btn:hover {
-  -webkit-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
-          box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
+  -webkit-box-shadow: 0px 0px 0px 3px #f7f7f7;
+          box-shadow: 0px 0px 0px 3px #f7f7f7;
 }
 
 .btn:disabled {
@@ -519,32 +580,46 @@ button {
 
 .btn-primary {
   background: #151f3a;
+  position: relative;
   color: white;
 }
 
-.btn-primary:hover {
-  background: #0a0f1c;
-  -webkit-transition: all 0.3s ease;
-  transition: all 0.3s ease;
+.btn-primary::after {
+  content: "";
+  display: block;
+  position: absolute;
+  border: 2px solid #151f3a;
 }
 
-.btn-primary:active {
-  background: black;
+.btn-primary::after:hover {
+  border-width: 5px;
+}
+
+.btn-primary:hover {
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
 
 .btn-secondary {
   background: #5faa89;
+  position: relative;
   color: white;
 }
 
-.btn-secondary:hover {
-  background: #4e9274;
-  -webkit-transition: all 0.3s ease;
-  transition: all 0.3s ease;
+.btn-secondary::after {
+  content: "";
+  display: block;
+  position: absolute;
+  border: 2px solid #5faa89;
 }
 
-.btn-secondary:active {
-  background: #305a47;
+.btn-secondary::after:hover {
+  border-width: 5px;
+}
+
+.btn-secondary:hover {
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
 
 @media (min-width: 775px) {
@@ -592,7 +667,7 @@ button {
   width: 100%;
   background: #4c4b54;
   color: white;
-  padding: 0.75em;
+  padding: 0.33333em;
   text-align: center;
 }
 
@@ -607,7 +682,7 @@ button {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding: 0.85714em 1.5em;
+  padding: 0.5em 1em;
 }
 
 .logo {
@@ -720,7 +795,7 @@ button {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding: 0 1.5em;
+  padding: 0 1em;
 }
 
 .primary-nav .nav-header.nav-active {
@@ -761,7 +836,7 @@ button {
 
 @media (min-width: 775px) {
   .site-header {
-    padding: 0.85714em;
+    padding: 0.5em;
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
   }
@@ -790,8 +865,8 @@ button {
     background-color: white;
   }
   .primary-nav .nav-linklist .nav-item a {
-    padding: 0.75em;
-    margin: 0 0.75em;
+    padding: 0.33333em;
+    margin: 0 0.33333em;
     font-family: AvenirLTPro-Medium;
     src: url("src/fonts/AvenirLTPro-Medium.woff2") format("woff2"), url("src/fonts/AvenirLTPro-Medium.woff") format("woff"), url("src/fonts/AvenirLTPro-Medium.ttf") format("truetype");
   }
@@ -855,12 +930,6 @@ button {
           justify-content: center;
 }
 
-@media (min-width: 775px) {
-  .main-banner {
-    padding: 8em 1em;
-  }
-}
-
 @media (min-width: 600px) {
   .button-container {
     -webkit-box-orient: horizontal;
@@ -899,6 +968,10 @@ button {
   overflow: hidden;
   padding: 4em 1em;
   z-index: 4;
+}
+
+.banner-description {
+  font-style: italic;
 }
 
 .card-columns {
@@ -1003,11 +1076,18 @@ button {
   padding: 0.5em 1em;
 }
 
+.benefit-container p.h3 {
+  font-family: Avenir-Medium-Italic;
+  font-size: 1.1em;
+  font-weight: normal;
+  font-style: normal;
+  letter-spacing: -0.25px;
+}
+
 @media (min-width: 775px) {
   .benefits,
   .blocks {
     margin: 5em auto;
-    padding: 2em 0;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;

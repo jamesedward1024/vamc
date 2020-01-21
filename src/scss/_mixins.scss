@@ -27,6 +27,33 @@
   }
 }
 
+//Pseudo Mixin
+@mixin pseudo($display: block, $pos: absolute, $content: "") {
+  content: $content;
+  display: $display;
+  position: $pos;
+}
+
+//Gradient Mixin
+@mixin gradient($start-color, $end-color, $orientation) {
+  background: $start-color;
+  @if $orientation == "vertical" {
+    background: -webkit-linear-gradient(top, $start-color, $end-color);
+    background: linear-gradient(to bottom, $start-color, $end-color);
+  } @else if $orientation == "horizontal" {
+    background: -webkit-linear-gradient(left, $start-color, $end-color);
+    background: linear-gradient(to right, $start-color, $end-color);
+  } @else {
+    background: -webkit-radial-gradient(
+      center,
+      ellipse cover,
+      $start-color,
+      $end-color
+    );
+    background: radial-gradient(ellipse at center, $start-color, $end-color);
+  }
+}
+
 @mixin base-font($size: 0.95em, $weight: 300, $style: normal) {
   font-family: $base-font;
   font-size: $size;
@@ -34,6 +61,19 @@
   font-style: $style;
   letter-spacing: 0.25px;
 }
+@mixin font-face($font-name, $file-name, $weight: normal, $style: normal) {
+  @font-face {
+    font-family: $font-name;
+    src: url($file-name+".eot");
+    src: url($file-name+".eot?#iefix") format("embedded-opentype"),
+      url($file-name+".woff") format("woff"),
+      url($file-name+".ttf") format("truetype"),
+      url($file-name+".svg##{$font-name}") format("svg");
+    font-weight: $weight;
+    font-style: $style;
+  }
+}
+
 @mixin avenirBlack {
   font-family: AvenirLTPro-Black;
   src: url("src/fonts/AvenirLTPro-Black.woff2") format("woff2"),
@@ -56,7 +96,7 @@
 @mixin background-base($bg) {
   width: 100%;
   background: $bg;
-  @if lightness($bg) < 70% {
+  @if lightness($bg) < 60% {
     color: white;
   }
 }
@@ -71,15 +111,19 @@
 
 @mixin button-bg($bg) {
   background: $bg;
+  position: relative;
   @if lightness($bg) < 70% {
     color: white;
   }
-  &:hover {
-    background: darken($bg, 8%);
-    transition: all 0.3s ease;
+  &::after {
+    @include pseudo(block, absolute, "");
+    border: 2px solid $bg;
+    &:hover {
+      border-width: 5px;
+    }
   }
-  &:active {
-    background: darken($bg, 25%);
+  &:hover {
+    transition: all 0.3s ease-in-out;
   }
 }
 

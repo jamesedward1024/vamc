@@ -3,7 +3,7 @@
 
 .banner-legal {
   @include background-base($steel);
-  padding: $padding-xs;
+  padding: $padding-one-third;
   text-align: center;
 }
 
@@ -12,7 +12,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: $padding-sm $padding;
+  padding: $padding-one-half $padding;
 }
 .logo {
   padding: 0.5em;
@@ -135,7 +135,7 @@
 
 @include for-size(tablet, up) {
   .site-header {
-    padding: $padding-sm;
+    padding: $padding-one-half;
     flex-wrap: wrap;
   }
   .nav-toggle {
@@ -155,8 +155,8 @@
       background-color: white;
 
       .nav-item a {
-        padding: $padding-xs;
-        margin: 0 $padding-xs;
+        padding: $padding-one-third;
+        margin: 0 $padding-one-third;
 
         @include avenirMedium;
       }

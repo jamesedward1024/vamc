@@ -34,11 +34,6 @@
   justify-content: center;
 }
 
-@include for-size(tablet, up) {
-  .main-banner {
-    padding: 8em 1em;
-  }
-}
 @include for-size(phone-lg, up) {
   .button-container {
     flex-direction: row;
@@ -72,6 +67,7 @@
 }
 
 .banner-description {
+  font-style: italic;
 }
 
 .card-columns {
@@ -150,13 +146,16 @@
 }
 .benefit-container {
   padding: 0.5em 1em;
+  p.h3 {
+    @include header-font(Avenir-Medium-Italic, $h3, normal);
+  }
 }
 
 @include for-size(tablet, up) {
   .benefits,
   .blocks {
     margin: 5em auto;
-    padding: 2em 0;
+
     display: flex;
     flex-flow: row wrap;
 

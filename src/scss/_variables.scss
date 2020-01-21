@@ -23,9 +23,18 @@ $black: #0a0a0a;
 $white: #ffffff;
 
 // Padding
-$padding: 1.5em;
-$padding-sm: $padding/1.75;
-$padding-xs: $padding/2;
+$padding: 1em;
+$padding-one-fourth: $padding/4;
+$padding-one-third: $padding/3;
+$padding-one-half: $padding/2;
+$padding-two-thirds: $padding-one-third * 2;
+$padding-three-fourths: $padding-one-fourth * 3;
+$padding-five-fourths: $padding-one-fourth * 5;
+$padding-six-fourths: $padding-one-fourth * 6;
 
 // Typography
+
 $base-font: "Open Sans", sans-serif;
+$baseFontSize: 0.85em;
+
+$h3: 1.1em;
