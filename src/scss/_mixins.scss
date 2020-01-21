@@ -27,10 +27,6 @@
     }
   }
 }
-// Section Wrapper Mixin
-@mixin section-wrapper {
-  padding: 0px 15px;
-}
 
 //Pseudo Mixin
 @mixin pseudo($display: block, $pos: absolute, $content: "") {
@@ -83,7 +79,6 @@
     position: $position;
     repeat: $repeat;
   }
-  z-index: -2;
 }
 //Button Mixin
 @mixin button-bg($bg) {

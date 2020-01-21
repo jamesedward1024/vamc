@@ -2,8 +2,8 @@
 <!DOCTYPE svg  PUBLIC '-//W3C//DTD SVG 1.1//EN'  'http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd'>
 <svg version="1.1" xmlns="http://www.w3.org/2000/svg">
 <defs>
-<font id="AvenirLTPro-Heavy" horiz-adv-x="574">
-<font-face font-family="o" font-weight="700" ascent="756" bbox="-58 -250 981 939" cap-height="708" descent="-244" panose-1="2 11 7 3 2 2 3 2 2 4" underline-position="-150" underline-thickness="50" unicode-range="U+0020-00FE" units-per-em="1000" x-height="480"/>
+<font id="Avenir-Heavy" horiz-adv-x="574">
+<font-face font-family="Avenir-Heavy" font-weight="700" ascent="756" bbox="-58 -250 981 939" cap-height="708" descent="-244" panose-1="2 11 7 3 2 2 3 2 2 4" underline-position="-150" underline-thickness="50" unicode-range="U+0020-00FE" units-per-em="1000" x-height="480"/>
 <missing-glyph/>
 <glyph glyph-name="space" horiz-adv-x="296" unicode=" "/>
 <glyph d="M88 708h120v-486h-120v486zM148 148q32 0 56 -22t24 -54t-23.5 -55t-56.5 -23q-32 0 -56 22t-24 54q0 33 23.5 55.5t56.5 22.5z" glyph-name="exclam" horiz-adv-x="296" unicode="!"/>
