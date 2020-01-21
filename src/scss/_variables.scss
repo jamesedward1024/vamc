@@ -15,12 +15,15 @@ $breakpoints: (
 
 // Colors
 $navy: #151f3a;
+$navy-light: rgba(21, 31, 58, 0.75);
 $green: #5faa89;
 $ivory: #d6d9ce;
 $steel: #4c4b54;
 $offwhite: #f8fbf9;
 $black: #0a0a0a;
 $white: #ffffff;
+$white-light: rgba(255, 255, 255, 0.55);
+$clear: rgba(0, 0, 0, 0);
 
 // Padding
 $padding: 1em;
@@ -33,8 +36,9 @@ $padding-five-fourths: $padding-one-fourth * 5;
 $padding-six-fourths: $padding-one-fourth * 6;
 
 // Typography
-
 $base-font: "Open Sans", sans-serif;
-$baseFontSize: 0.85em;
-
-$h3: 1.1em;
+$baseFontSize: 0.9em;
+$h1-size: 3em;
+$h2-size: 2.5em;
+$h3-size: 1.3em;
+$h4-size: 1.1em;

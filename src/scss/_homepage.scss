@@ -1,7 +1,7 @@
 /* Top Banner
  * ========================================================================== */
 .section-wrapper-1 {
-  @include background-base($navy);
+  @include gradient(top right, $navy, $navy-light 250%);
 }
 .main-banner {
   display: flex;
@@ -10,25 +10,24 @@
   min-height: 40vh;
   overflow: hidden;
   position: relative;
-  padding: 6em 1em;
+  padding: $padding * 6 $padding;
   align-items: center;
   justify-content: center;
   .hero-text {
     text-align: center;
+    margin-bottom: 0;
   }
   .subtitle {
+    @include font-stack($base-font, 1.05em, 100);
+    letter-spacing: 1.5px;
+    font-style: oblique;
     padding: 20px 0;
-    font-size: 1em;
-    letter-spacing: 2px;
-    font-style: italic;
-    font-weight: 100;
     text-align: center;
   }
 }
 .button-container {
   display: inherit;
   width: 100%;
-  margin-top: 30px;
   flex-direction: column;
   align-items: center;
   justify-content: center;
@@ -37,23 +36,22 @@
 @include for-size(phone-lg, up) {
   .button-container {
     flex-direction: row;
+    margin: $padding * 3.5 0 $padding * 2 0;
   }
 }
 /* Resources Section
  * ========================================================================== */
 .section-wrapper-2 {
   position: relative;
+  @include background("/src/images/resources-bg.jpg", cover, 70% bottom);
   &::after {
-    content: "";
-    position: absolute;
+    @include pseudo();
     top: 0;
     right: 0;
     left: 0;
     bottom: 0;
     z-index: -1;
-    @include background("/src/images/resources-bg.jpg");
-    background-color: rgba(255, 255, 255, 0.25);
-    background-blend-mode: lighten;
+    @include gradient(right, $white-light, $clear 130%);
   }
 }
 
@@ -62,12 +60,20 @@
   height: 100%;
   min-height: 60vh;
   overflow: hidden;
-  padding: 4em 1em;
+  padding: $padding * 6 $padding $padding * 3;
   z-index: 4;
+
+  & .title-text {
+    overflow-wrap: break-word;
+    max-width: 700px;
+    width: 100%;
+    margin-bottom: 0;
+  }
 }
 
 .banner-description {
-  font-style: italic;
+  padding: $padding 0;
+  font-style: oblique;
 }
 
 .card-columns {
@@ -92,10 +98,9 @@
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(2, 1fr);
-    grid-template-rows: auto;
     width: fit-content;
-    grid-column-gap: 0.75em;
-    grid-row-gap: 0.5em;
+    grid-column-gap: 30px;
+    grid-row-gap: 30px;
   }
 }
 
@@ -125,14 +130,14 @@
   }
   .left {
     .h3 {
+      @include font-stack(Avenir-Medium, $h3-size, norml);
       margin-bottom: 0.5em;
       position: relative;
 
       &::after {
+        @include pseudo();
         background-color: $green;
-        content: "";
         height: 3px;
-        position: absolute;
         bottom: -2px;
         left: 0;
         width: 40px;
@@ -146,16 +151,12 @@
 }
 .benefit-container {
   padding: 0.5em 1em;
-  p.h3 {
-    @include header-font(Avenir-Medium-Italic, $h3, normal);
-  }
 }
 
 @include for-size(tablet, up) {
   .benefits,
   .blocks {
     margin: 5em auto;
-
     display: flex;
     flex-flow: row wrap;
 
@@ -167,9 +168,6 @@
     }
     .left {
       flex-basis: 50%;
-      .h3 {
-        margin-bottom: 0.5em;
-      }
 
       .benefit-description {
         margin: 0.5em 0 2em 1.25em;
@@ -194,15 +192,13 @@
   min-height: 300px;
   margin-bottom: 2em;
   width: 100%;
-  box-shadow: 0 3px 7px -1px rgba(#000, 0.14);
-  margin-bottom: 1.6%;
+  box-shadow: 0 0px 7px -1px rgba(#000, 0.14);
   position: relative;
-  border-radius: 4px;
+  border-radius: 3px;
 
   &#cta {
     &::after {
-      content: "";
-      position: absolute;
+      @include pseudo();
       height: 100%;
       top: 0;
       right: 0;
@@ -216,8 +212,7 @@
   }
   &#resources {
     &::after {
-      content: "";
-      position: absolute;
+      @include pseudo();
       height: 100%;
       top: 0;
       right: 0;
@@ -231,8 +226,7 @@
   }
   &#va-loan {
     &::after {
-      content: "";
-      position: absolute;
+      @include pseudo();
       height: 100%;
       top: 0;
       right: 0;
@@ -261,8 +255,7 @@
 .section-wrapper-5 {
   position: relative;
   &::after {
-    content: "";
-    position: absolute;
+    @include pseudo();
     top: 0;
     right: 0;
     left: 0;

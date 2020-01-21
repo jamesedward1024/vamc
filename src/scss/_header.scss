@@ -15,7 +15,7 @@
   padding: $padding-one-half $padding;
 }
 .logo {
-  padding: 0.5em;
+  padding: $padding-one-half;
   max-width: 60%;
 }
 .nav-toggle {
@@ -37,26 +37,22 @@
     transition: background 0s 0s;
     &::before,
     &::after {
-      position: absolute;
+      @include pseudo();
       left: 0;
-      display: block;
       width: 100%;
       height: 2px;
       background-color: $black;
       border-radius: 2px;
-      content: "";
       transition-delay: 0.1s 0s;
       transition-duration: 0.2s;
     }
     &::before {
       top: -8px;
-
       transition-property: top, transform;
     }
 
     &::after {
       bottom: -8px;
-
       transition-property: bottom, transform;
     }
   }
@@ -68,18 +64,15 @@
     &::before,
     &::after {
       background-color: $ivory;
-
       transition-delay: 0s 0.2s;
       transition-duration: 0.2s;
     }
     &::before {
       top: 0;
-
       transform: rotate(45deg);
     }
     &::after {
       bottom: 0;
-
       transform: rotate(-45deg);
     }
   }
@@ -120,7 +113,7 @@
       padding-bottom: 10px;
       border-bottom: 1.5px solid $ivory;
       a {
-        @include avenirMedium;
+        @include font-stack(Avenir-Medium, $baseFontSize, normal);
         color: $ivory;
       }
     }
@@ -158,7 +151,7 @@
         padding: $padding-one-third;
         margin: 0 $padding-one-third;
 
-        @include avenirMedium;
+        @include font-stack(Avenir-Medium, $baseFontSize, normal);
       }
     }
   }
