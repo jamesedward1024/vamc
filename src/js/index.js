@@ -1,5 +1,3 @@
-import "/src/scss/style.css";
-
 document.querySelector(".nav-toggle").addEventListener("click", function(e) {
   [].map.call(
     document.querySelectorAll(
