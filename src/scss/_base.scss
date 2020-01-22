@@ -15,9 +15,8 @@ body {
   font-size: calc(16px + 0.3vw);
 }
 
-.section-wrapper {
-  padding-top: 0;
-  clear: both;
+section {
+  margin: 0;
 }
 .site-wrapper {
   margin: 0 auto;
@@ -37,11 +36,15 @@ body {
   }
 }
 .inner-wrapper {
-  width: 95%;
   max-width: 1300px;
   margin: 0 auto;
   padding: 2em 1em;
   position: relative;
+  &--full {
+    max-width: 98%;
+    margin: 0 auto;
+    padding: 2em 1em;
+  }
 }
 
 .centered {
@@ -235,7 +238,7 @@ button {
   max-width: 250px;
   width: 100%;
   padding: $padding-two-thirds;
-  margin: 20px 0;
+  margin: 20px;
   text-align: center;
   border-radius: 3px;
   color: $black;

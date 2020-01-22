@@ -108,7 +108,7 @@
   }
 }
 
-/* Search
+/* Benefits Section
  * ========================================================================== */
 .section-wrapper-3 {
   @include background-base($white);
@@ -182,7 +182,7 @@
   display: grid;
   justify-content: center;
   align-content: center;
-  grid-gap: 2em;
+  grid-gap: 0.5em;
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: repeat(2, auto);
   grid-auto-rows: auto;
@@ -193,7 +193,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  min-height: 300px;
+  min-height: 200px;
   box-shadow: 0px 0px 10px -1px rgba(#000, 0.1);
   position: relative;
   border-radius: 3px;
@@ -201,6 +201,7 @@
 
   p,
   a {
+    text-align: center;
     z-index: 999;
   }
 
@@ -222,7 +223,7 @@
 
   &::after {
     @include pseudo();
-    border-radius: 3px;
+    border-radius: 1px;
     height: 100%;
     top: 0;
     right: 0;
@@ -232,6 +233,8 @@
   }
 
   @include for-size(tablet, up) {
+    min-height: 300px;
+
     &:nth-child(1) {
       grid-row: 1;
       grid-column: 1;
@@ -246,7 +249,11 @@
     }
   }
 }
-
+@include for-size(tablet, up) {
+  .blocks {
+    grid-gap: 2em;
+  }
+}
 /* Search Section
  * ========================================================================== */
 .section-wrapper-5 {
@@ -269,43 +276,38 @@
 
   .field {
     position: relative;
-  }
-  label {
-    color: $black;
-    left: 50%;
-    position: absolute;
-    transform: translate(-50%, -50%);
-    top: 50%;
-    transition: left 0.4s, transform 0.4s;
-    padding: 0 1.5em;
-  }
-  .input-search {
-    border: 1px solid $black;
-    border-radius: 0.25em;
-    box-shadow: 0 1px 0 #bfbebf;
-    display: block;
-    padding: 0.5em 2em;
-    width: 100%;
-    &:focus,
-    &:valid {
-      & + label {
-        left: 0.5em;
-        transform: translate(0, -50%);
-      }
-    }
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    grid-row-gap: 1em;
 
-    &:valid {
-      & + label {
-        text-indent: -9999px;
-      }
+    .h3 {
+      font-size: 1.7em;
+      text-align: center;
     }
+  }
+
+  .input-search {
+    border: 1px solid $steel;
+    height: 45px;
+    border-radius: 3px;
+    box-shadow: 0 1px 0 #bfbebf;
+    padding: 0.15em 2em;
+    width: 100%;
   }
 }
 
 @include for-size(tablet, up) {
-  .search-container {
-    flex-basis: 60%;
-    padding-left: 2em;
-    margin: 2em auto;
+  .search .field {
+    grid-template-columns: 1fr 1fr;
+    .h3 {
+      font-size: 1.7em;
+      text-align: left;
+      overflow-wrap: break-word;
+      max-width: 400px;
+    }
+    .input-search {
+      height: 65px;
+    }
   }
 }

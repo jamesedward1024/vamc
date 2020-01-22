@@ -113,7 +113,7 @@
       padding-bottom: 10px;
       border-bottom: 1.5px solid $ivory;
       a {
-        @include font-stack(Avenir-Medium, $baseFontSize, normal);
+        @include font-stack(Avenir-Medium, 1.2em, normal);
         color: $ivory;
       }
     }
@@ -150,7 +150,7 @@
       .nav-item a {
         padding: $padding-one-third;
         margin: 0 $padding-one-third;
-
+        color: $black;
         @include font-stack(Avenir-Medium, $baseFontSize, normal);
       }
     }

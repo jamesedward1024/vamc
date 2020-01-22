@@ -11,25 +11,27 @@
 .footer-nav {
   @include background-base($navy);
   width: 100%;
-  margin-top: 2em;
-  padding: 1.5em 0 1.15em;
-  &.site-nav {
-    display: block;
-  }
+  margin-top: $padding * 2;
+  padding: $padding 0 $padding;
+
   .nav-linklist {
+    display: flex;
+    flex-direction: column;
     width: 100%;
     margin-block-start: 0;
     padding-inline-start: 0;
     list-style: none;
     .nav-item {
-      width: fit-content;
       margin: 0 auto;
       padding: 0.35em 0;
       a {
+        @include font-stack(Avenir-Medium, $baseFontSize, normal);
         color: $white;
-        text-decoration: none;
         text-align: center;
       }
+    }
+    @include for-size(tablet, up) {
+      flex-direction: row;
     }
   }
 }
