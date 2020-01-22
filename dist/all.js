@@ -1,1 +1,0 @@
-document.querySelector(".nav-toggle").addEventListener("click",function(e){[].map.call(document.querySelectorAll(".primary-nav, .site-wrapper, .nav-header, .nav-linklist"),function(e){e.classList.toggle("nav-active")})});

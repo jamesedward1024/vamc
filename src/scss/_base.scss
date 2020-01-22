@@ -57,19 +57,19 @@ section {
 
 @include font-face(
   Avenir-Medium,
-  "/src/scss/fonts/avenir-medium/Avenir-Medium",
+  "../fonts/avenir-medium/Avenir-Medium",
   550,
   normal
 );
 @include font-face(
   Avenir-Heavy,
-  "/src/scss/fonts/avenir-heavy/Avenir-Heavy",
+  "../fonts/avenir-heavy/Avenir-Heavy",
   700,
   normal
 );
 @include font-face(
   Avenir-Black,
-  "/src/scss/fonts/avenir-black/Avenir-Black",
+  "../fonts/avenir-black/Avenir-Black",
   750,
   normal
 );
